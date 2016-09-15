@@ -1,13 +1,13 @@
 # coding:utf8
 import sys
-from html2epub import html2epub
+from toEpub import html2epub
 
 reload(sys)
 sys.setdefaultencoding('utf8')
 
 sys.getdefaultencoding()
 
-if __name__ == '__main__':
+def start_transfer():
     path = 'papers'
     ToPath = path + '_epub'
     zh = html2epub(path, ToPath)

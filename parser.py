@@ -3,6 +3,7 @@ import time,os,codecs,sys
 import requests
 from bs4 import BeautifulSoup
 import getpass
+import main
 
 reload(sys)
 sys.setdefaultencoding('utf-8')
@@ -85,6 +86,7 @@ def zhuanlan_text(zlname):
         offset = offset + 100
 
     print('-----------------------文章爬取完毕-----------------------\n')
+    os.chdir("..")
 
 if __name__ == '__main__':
     username = raw_input('phone_num: ')
@@ -92,3 +94,4 @@ if __name__ == '__main__':
     login(username,password)
     zlname = raw_input('请输入专栏英文名: ')
     start(zlname)
+    main.start_transfer()
